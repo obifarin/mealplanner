@@ -31,7 +31,7 @@ with st.sidebar:
 if choice == 'Introduction': 
 
     st.title("Autogenerate Meal Plans :shallow_pan_of_food:, Grocery Lists :memo:, Recipes :cucumber:")
-    st.info("""An auto generated meal planner """)
+    st.info("""An auto generated meal planner. Navigate to different sections via the side bar""")
     st.image("meal-plan.png", caption='Olatomiwa X DALLE-2') #, width=500
 
 # Frontend Panel 2
@@ -52,7 +52,7 @@ if choice == 'Meal Plan':
             with st.spinner("Generating Meal plan..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Meal plan Output:")
-            st.markdown("#### [Note: copy and paste the output in another browser before leaving this page.]")
+            st.markdown("#### [Note: copy and paste the output in another browser before leaving this page. You can use [a note pad](https://anotepad.com/)]")
         
             st.write(output)
 
