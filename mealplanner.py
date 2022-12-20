@@ -65,8 +65,6 @@ if choice == 'Grocery List':
 
     with st.form(key="form2"):
         prompt = st.text_input("Paste your meal plan")
-        #st.text(f"Only include the keyword. For example: Keto, Elemental, Carnivore, Jain, Atkins.")
-        #st.write("Don't know where to start? Click here for list of [diet](https://en.wikipedia.org/wiki/List_of_diets)")
 
         submit_button = st.form_submit_button(label='Generate Grocery List')
 
@@ -76,7 +74,7 @@ if choice == 'Grocery List':
             with st.spinner("Generating grocery list..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Grocery list output:")
-            st.markdown("#### [Note: copy and paste the output before leaving this page.]")
+            st.markdown("#### [Note: copy and paste the output before leaving this page, if you will need it.]")
         
             st.write(output)
 
