@@ -50,7 +50,7 @@ if choice == 'Meal Plan':
         boilerPrompt = ("Give me a detailed meal plan for a week for %s diet starting with the heading Day 1, Day 2, and so on. Be sure to include snacks." %prompt)
 
         if submit_button:
-            with st.spinner("Generating Meal plan..."):
+            with st.spinner("Generating your meal plan, work in progress..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Meal plan Output:")
             st.markdown("#### [Note: copy and paste the output in another browser before leaving this page. You can use [a note pad](https://anotepad.com/)]")
@@ -72,7 +72,7 @@ if choice == 'Grocery List':
         boilerPrompt = ("Generate a list of what to buy from the grocery store from this: %s" %prompt)
 
         if submit_button:
-            with st.spinner("Generating grocery list..."):
+            with st.spinner("Generating your grocery list, work in progress..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Grocery list output:")
             st.markdown("#### [Note: copy and paste the output before leaving this page, if you will need it.]")
@@ -95,7 +95,7 @@ if choice == 'Recipe App':
         boilerPrompt = ("Provide a detailed step-by-step plan to make this meal: %s " %prompt)
 
         if submit_button:
-            with st.spinner("Generating Mealplan..."):
+            with st.spinner("Generating your recipe, work in progress..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Meal plan Output:")
         
