@@ -66,7 +66,7 @@ if choice == 'Meal Plan':
             with st.spinner("Generating your meal plan, work in progress..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Meal plan Output:")
-            st.markdown(":bookmark: :blue[**Note: I am aware of the need for a 'copy to clipboard' functionality, in the meantime, copy and paste the entire output in another document before leaving this page. (This list will be used to generate your grocery list.) You can use :link: [aNotepad](https://anotepad.com/)**]")
+            st.markdown(":bookmark: :blue[**Note: I am aware of the need for a 'copy to clipboard' functionality, in the meantime, copy and paste the entire output in another document before leaving this page. This list will be used to generate your grocery list. You can use :link: [aNotepad](https://anotepad.com/)**]")
         
             st.write(output)
             st.info(""":warning: Recall that the generative AI model (GPT-3) can occassionally give errorneous output. Validation is required.""")
