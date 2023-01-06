@@ -1,6 +1,6 @@
 import streamlit as st
 import openai
-import pyperclip
+#import pyperclip
 
 # Backend 
 
