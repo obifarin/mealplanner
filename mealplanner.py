@@ -41,7 +41,7 @@ if choice == 'Meal Plan':
     st.markdown("## Generate Meal Plan :shallow_pan_of_food:")
 
     with st.form(key="form"):
-        prompt = st.text_input("Name of the diet", default= "Keto")
+        prompt = st.text_input("Name of the diet", default_value= "Keto")
         st.info(f"Only include the keyword. For example: Keto, Elemental, Carnivore, Jain, Atkins.")
         st.write("Don't know where to start? Click here for list of [diet](https://en.wikipedia.org/wiki/List_of_diets)")
 
