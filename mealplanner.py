@@ -88,7 +88,7 @@ if choice == 'Recipe App':
 
     with st.form(key="form3"):
         prompt = st.text_input("Name of the meal")
-        st.info(f"Copy and paste a meal from your generated meal plan (or any meal for that matter).")
+        st.info(f"Copy and paste a meal from your generated meal plan (or other meal).")
 
         submit_button = st.form_submit_button(label='Generate meal recipe')
 
