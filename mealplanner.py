@@ -32,7 +32,7 @@ if choice == 'Introduction':
 
     st.title("Autogenerate Meal Plans :shallow_pan_of_food:, Grocery Lists :memo:, Recipes :cucumber:")
     st.info("""Navigate to different sections via the side bar""")
-    st.info("""NOTE: The model will not perform well on meals that are not well represented on the web, such as African dishes. The AI model used is GPT-3 model, trained on all information on the web.}""")
+    st.info("""NOTE: The generative model will not perform well on meals that are not well represented on the web, such as African dishes. The AI model used is GPT-3 model, trained on all information on the web. Furthermore, the model can occassionally give errorneous output""")
     st.image("meal-plan.png", caption='Olatomiwa X DALLE-2') #, width=500
 
 # Frontend Panel 2
@@ -47,7 +47,7 @@ if choice == 'Meal Plan':
 
         submit_button = st.form_submit_button(label='Generate Meal plan')
 
-        boilerPrompt = ("Give me a detailed meal plan for a week for %s diet" %prompt)
+        boilerPrompt = ("Give me a detailed meal plan for a week for %s diet starting with the heading Day 1, Day 2, and so on. Be sure to include snacks." %prompt)
 
         if submit_button:
             with st.spinner("Generating Meal plan..."):
