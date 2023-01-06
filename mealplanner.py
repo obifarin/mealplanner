@@ -39,7 +39,7 @@ with st.sidebar:
     st.info("App by [Olatomiwa Bifarin](https://twitter.com/BifarinTheFifth) :male-technologist:")
     st.info("""Navigate to different sections via the side bar""")
     choice = st.radio("Navigation", ["Introduction", "Meal Plan", "Grocery List", "Recipe App"])
-    st.sidebar.markdown('<a href="mailto:obifarin@yahoo.com">Any feedback?</a>', unsafe_allow_html=True)
+    st.sidebar.markdown('<a href="mailto:obifarin@yahoo.com">Any feedbacks?</a>', unsafe_allow_html=True)
 
 # Frontend Panel 1
 if choice == 'Introduction': 
