@@ -25,13 +25,13 @@ def mealplan(userPrompt):
 with st.sidebar:
     st.title("Meal Planner :coconut:")
     st.info("App by Olatomiwa Bifarin :male-technologist:")
+    st.info("""Navigate to different sections via the side bar""")
     choice = st.radio("Navigation", ["Introduction", "Meal Plan", "Grocery List", "Recipe App"])
 
 # Frontend Panel 1
 if choice == 'Introduction': 
 
     st.title("Autogenerate Meal Plans :shallow_pan_of_food:, Grocery Lists :memo:, Recipes :cucumber:")
-    st.info("""Navigate to different sections via the side bar""")
     st.info("""NOTE: The generative model will not perform well on meals that are not well represented on the web, such as African dishes. The AI model used is GPT-3 model, trained on all information on the web. Furthermore, the model can occassionally give errorneous output""")
     st.image("meal-plan.png", caption='Olatomiwa X DALLE-2') #, width=500
 
