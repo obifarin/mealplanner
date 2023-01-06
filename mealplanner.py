@@ -1,5 +1,6 @@
 import streamlit as st
 import openai
+import pyperclip
 
 # Backend 
 
@@ -19,6 +20,17 @@ def mealplan(userPrompt):
         )
     return response.get("choices")[0]['text']
 
+
+#def copy_to_clipboard(text):
+#    pyperclip.copy(text)
+#    st.write(f"Copied to clipboard")
+
+# Copy to clipboard
+#text_to_copy = copytext
+#button_label = "Copy to clipboard"
+#button_text = st.button(button_label)
+#if button_text:
+#    copy_to_clipboard(text_to_copy)
 
  # Frontend  
 
@@ -53,11 +65,13 @@ if choice == 'Meal Plan':
             with st.spinner("Generating your meal plan, work in progress..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Meal plan Output:")
-            st.markdown("#### [Note: copy and paste the output in another browser before leaving this page. You can use [a note pad](https://anotepad.com/)]")
+            st.markdown("##### [Note: I will work on a 'copy to clipboard' functionality, in the meantime, copy and paste your output in another document before leaving this page. You can use [a note pad](https://anotepad.com/)]")
         
             st.write(output)
 
             st.markdown("____")
+
+  
         
 # Frontend Panel 3
 if choice == 'Grocery List': 
