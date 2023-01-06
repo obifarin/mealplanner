@@ -31,7 +31,8 @@ with st.sidebar:
 if choice == 'Introduction': 
 
     st.title("Autogenerate Meal Plans :shallow_pan_of_food:, Grocery Lists :memo:, Recipes :cucumber:")
-    st.info("""Navigate to different sections via the side bar. {Note that the model will not perform well on meals that are not well represented on the web, such as African dishes. The AI model used is GPT-3 model, trained on all information on the web.}""")
+    st.info("""Navigate to different sections via the side bar""")
+    st.info("""NOTE: The model will not perform well on meals that are not well represented on the web, such as African dishes. The AI model used is GPT-3 model, trained on all information on the web.}""")
     st.image("meal-plan.png", caption='Olatomiwa X DALLE-2') #, width=500
 
 # Frontend Panel 2
