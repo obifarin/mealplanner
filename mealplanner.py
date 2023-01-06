@@ -36,7 +36,7 @@ def mealplan(userPrompt):
 
 with st.sidebar:
     st.title("Meal Planner :coconut:")
-    st.info("App by Olatomiwa Bifarin :male-technologist:")
+    st.info("App by [Olatomiwa Bifarin](https://twitter.com/BifarinTheFifth) :male-technologist:")
     st.info("""Navigate to different sections via the side bar""")
     choice = st.radio("Navigation", ["Introduction", "Meal Plan", "Grocery List", "Recipe App"])
 
@@ -44,7 +44,7 @@ with st.sidebar:
 if choice == 'Introduction': 
 
     st.title("Autogenerate Meal Plans :shallow_pan_of_food:, Grocery Lists :memo:, Recipes :cucumber:")
-    st.info("""NOTE: The generative model will not perform well on meals that are not well represented on the web, such as African dishes. The AI model used is GPT-3 model, trained on all information on the web. Furthermore, the model can occassionally give errorneous output""")
+    st.info(""":warning: The generative AI model (GPT-3) that powers this app will not perform well on meals that are not well represented on the web, such as African dishes. This is because the model was trained on all information on the web. Furthermore, the model can occassionally give errorneous output. **Validation is required**.""")
     st.image("meal-plan.png", caption='Olatomiwa X DALLE-2') #, width=500
 
 # Frontend Panel 2
@@ -54,20 +54,21 @@ if choice == 'Meal Plan':
 
     with st.form(key="form"):
         prompt = st.text_input("Name of the diet", value= "Keto")
-        st.info(f"Only include the keyword. For example: Keto, Elemental, Carnivore, Jain, Atkins.")
+        st.info(f"Only include the keyword. For example: Keto, Carnivore, Jain, etc.")
         st.write("Don't know where to start? Click here for list of [diet](https://en.wikipedia.org/wiki/List_of_diets)")
 
         submit_button = st.form_submit_button(label='Generate Meal plan')
 
-        boilerPrompt = ("Give me a detailed meal plan for a week for %s diet starting with the heading Day 1, Day 2, and so on. Be sure to include snacks." %prompt)
+        boilerPrompt = ("Give me a detailed meal plan for a week for %s diet starting with the heading Day 1, Day 2, and so on. Be sure to include snacks. Also start each meal (that is breakfast, lunch, dinner, snack) on a new line." %prompt)
 
         if submit_button:
             with st.spinner("Generating your meal plan, work in progress..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Meal plan Output:")
-            st.markdown("##### [Note: I will work on a 'copy to clipboard' functionality, in the meantime, copy and paste your output in another document before leaving this page. You can use [a note pad](https://anotepad.com/)]")
+            st.markdown(":bookmark: :blue[**Note: I am aware of the need for a 'copy to clipboard' functionality, in the meantime, copy and paste the entire output in another document before leaving this page. (This list will be used to generate your grocery list.) You can use :link: [aNotepad](https://anotepad.com/)**]")
         
             st.write(output)
+            st.info(""":warning: Recall that the generative AI model (GPT-3) can occassionally give errorneous output. Validation is required.""")
 
             st.markdown("____")
 
@@ -83,15 +84,16 @@ if choice == 'Grocery List':
 
         submit_button = st.form_submit_button(label='Generate Grocery List')
 
-        boilerPrompt = ("Generate a list of what to buy from the grocery store from this: %s" %prompt)
+        boilerPrompt = ("Generate a list of what to buy from the grocery store from this. Make sure they are raw food: %s" %prompt)
 
         if submit_button:
             with st.spinner("Generating your grocery list, work in progress..."):
                 output = mealplan(boilerPrompt)
             st.markdown("### Grocery list output:")
-            st.markdown("#### [Note: copy and paste the output before leaving this page, if you will need it.]")
+            st.markdown(":bookmark: :blue[**Note: I am aware of the need for a 'copy to clipboard' functionality, in the meantime, copy and paste the output in another document before leaving this page, if you need it. You can use :link: [aNotepad](https://anotepad.com/)**]")
         
             st.write(output)
+            st.info(""":warning: Recall that the generative AI model (GPT-3) can occassionally give errorneous output. Validation is required.""")
 
             st.markdown("____")        
 
@@ -114,5 +116,6 @@ if choice == 'Recipe App':
             st.markdown("### Meal plan Output:")
         
             st.write(output)
+            st.info(""":warning: Recall that the generative AI model (GPT-3) can occassionally give errorneous output. Validation is required.""")
 
             st.markdown("____")
