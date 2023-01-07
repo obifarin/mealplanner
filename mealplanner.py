@@ -45,7 +45,7 @@ with st.sidebar:
 if choice == 'Introduction': 
 
     st.title("Autogenerate Meal Plans :shallow_pan_of_food:, Grocery Lists :memo:, Recipes :cucumber:")
-    st.info(""":warning: The generative AI model (GPT-3) that powers this app *might not perform well on meals that are not well represented on the web, such as African dishes. This is because the model was trained on all information on the web, with a likely bias towards western diet. Furthermore, the model can occassionally give errorneous output. **Validation is required**. With that out of the way, Happy meal planning!""")
+    st.info(""":warning: The generative AI model (GPT-3) that powers this app *might not perform well on meals that are not well represented on the web. This is because the model was trained on all information on the web, with a likely bias towards western diet. Furthermore, the model can occassionally give errorneous output. **Validation is required**. With that out of the way, Happy meal planning!""")
     st.image("meal-plan.png", caption='Olatomiwa X DALLE-2') #, width=500
 
 # Frontend Panel 2
