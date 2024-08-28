@@ -4,7 +4,7 @@ import openai
 
 # Backend 
 
-openai.api_key = "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"
+#openai.api_key = "sk- "
 
 def mealplan(userPrompt):
     """Returns a generated an meal plan using GPT3 with a certain prompt"""
