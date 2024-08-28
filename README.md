@@ -1,2 +1,2 @@
 # mealplanner
- A meal planner app powered by GPT.
+one of the first app I built with GPT API in 2022
